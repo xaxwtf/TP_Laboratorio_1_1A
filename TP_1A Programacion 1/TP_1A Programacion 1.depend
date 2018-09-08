@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1536370379 source:h:\repositores2\parciales\nueva carpeta\tp_1a programacion 1\s_ariel.c
+	<stdio.h>
+	"S_Ariel.h"
+
+1536370420 h:\repositores2\parciales\nueva carpeta\tp_1a programacion 1\s_ariel.h
+
+1536369532 source:h:\repositores2\parciales\nueva carpeta\tp_1a programacion 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"S_Ariel.h"
+
