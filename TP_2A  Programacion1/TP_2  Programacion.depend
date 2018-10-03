@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1538601207 source:h:\1a\tp_2  programacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+	"S_Ariel.h"
+
+1538604113 h:\1a\tp_2  programacion\arrayemployees.h
+
+1538601181 h:\1a\tp_2  programacion\s_ariel.h
+
+1538601123 source:h:\1a\tp_2  programacion\s_ariel.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"S_Ariel.h"
+
+1538602194 source:h:\1a\tp_2  programacion\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	"string.h"
+	"S_Ariel.h"
+	"ArrayEmployees.h"
+
