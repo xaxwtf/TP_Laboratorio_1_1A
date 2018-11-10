@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "S_Ariel.h"
-#define TAM 4
+#define TAM 5
 
 int main()
 {
@@ -19,6 +19,7 @@ int main()
     num=0;
     inizArray(estado,5,-1,0);
     do{
+        system("cls");
         printf("---CALCULADORA V 1.0--- \n 1-Ingresar 1er Operando(A=  %.2f). \n 2-Ingresar 2do Operando(B=  %.2f).\n 3-Calcular Todas las Operaciones.\n 4-Informar Resultados.\n 5-Salir \n ",num,num2);
         scanf("%d",&opcion);
         switch(opcion)
@@ -43,21 +44,25 @@ int main()
                         {
                         case 'a':
                             valores[0]=num+num2;
+                            printf("%0.2f + %0.2f=%.2f",num,num2,valores[0]);
                             estado[0]=1;
                             break;
                         case 'b':
                             valores[1]=num-num2;
+                            printf("%0.2f - %0.2f=%.2f",num,num2,valores[1]);
                             estado[1]=1;
                             break;
                         case 'c':
                             if(num2!=0)
                             {
                                 valores[2]=num/num2;
+                                printf("%0.2f / %0.2f=%.2f",num,num2,valores[2]);
                                 estado[2]=1;
                             }
                             break;
                         case 'd':
                             valores[3]=num*num2;
+                            printf("%0.2f * %0.2f=%.2f",num,num2,valores[3]);
                             estado[3]=1;
                             break;
                         case 'e':
@@ -65,19 +70,23 @@ int main()
                             {
                                 factorA=1;
                                 estado[4]=1;
+                                printf("\nEl factorial de 0 es %.0f",factorA);
                             }
                             else if(num<0)
                             {
                                 factorA=0;
+                                printf("\nError, no se puede realizar el factorial de un numero negativo\n");
                             }
                             else
                             {
                             for(int i=num;i>=1;i--)
                                 {
                                     factorA=factorA*i;
+
                                 }
                                 estado[4]=1;
                             }
+                            printf("\n El factorial de %.2f= %.2f",num,factorA);
 
                             if(num2==0)
                             {
@@ -110,7 +119,7 @@ int main()
                         switch(sub_op)
                         {
                         case 'a':
-                            if(estado[0]!=-1)
+                            if(estado[0]==1)
                             {
                                 printf("El resultado de la Suma A+B es: %.2f",valores[0]);
                             }
@@ -148,14 +157,14 @@ int main()
                         case 'e':
                             if(estado[4]!=-1)
                             {
-                                printf("\n El Factorial de A es: %.2f",factorA);
+                                printf("\n El Factorial de A es: %.2f\n",factorA);
                             }
                             else{
                                 printf("\n no Existe el Factorial de Numeros Negativos o Fracciones ");
                             }
                             if(estado[5]!=-1)
                             {
-                                printf("  El Factorial de B es: %.2f",factorB);
+                                printf("  El Factorial de B es: %.2f\n",factorB);
                             }
                             else
                             {
